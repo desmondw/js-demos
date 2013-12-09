@@ -1,0 +1,50 @@
+<!doctype html>
+<html ng-app>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="bower_components/sass-bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+  <body>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="clock" ng-controller="clockCtrl">
+            <div class="center-text">
+              <span class="time">{{time | date:'h:mm'}}</span>
+              <span class="seconds">{{time | date:'ss'}}</span>
+            </div>
+            <div class="center-text">
+              <ul class="days">
+                <li ng-repeat="day in days">
+                  <span class="{{day.class}}" ng-click="setDay($event.target)">{{day.text}}</span>
+                </li>
+
+<!-- 
+                <li><span class="{{matchDay(1)}}">MON</span></li>
+                <li><span class="{{matchDay(2)}}">TUE</span></li>
+                <li><span class="{{matchDay(3)}}">WED</span></li>
+                <li><span class="{{matchDay(4)}}">THU</span></li>
+                <li><span class="{{matchDay(5)}}">FRI</span></li>
+                <li><span class="{{matchDay(6)}}">SAT</span></li>
+                <li><span class="{{matchDay(0)}}">SUN</span></li>
+ -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="bower_components/jquery/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="scripts/jquery.transit.min.js"></script>
+    <script src="scripts/style.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

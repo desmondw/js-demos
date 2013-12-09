@@ -1,0 +1,80 @@
+@font-face {
+    font-family: "Neou-Bold";
+    src: url('../fonts/Neou-Bold.ttf');
+}
+@font-face {
+    font-family: "CaviarDreams";
+    src: url('../fonts/CaviarDreams.ttf');
+}
+
+$font_days: "Neou-Bold";
+$font_clock: "CaviarDreams";
+
+$offwhite: #f9f9f9;
+$offblack: #1b1b1b;
+$offblack-disabled: #aaaaaa;
+
+body {
+    background-color: $offwhite;
+    color: $offblack;
+}
+
+.clock {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+
+    .time {
+        transition: all 1s ease;
+        display: inline-block;
+        font: 200px/1 $font_clock;
+        color: $offblack;
+    }
+
+    .seconds {
+        transition: all 1s ease;
+        display: inline-block;
+        font: 100px/1 $font_clock;
+        color: $offblack;
+    }
+
+    .days {
+        transition: all .3s ease;
+        list-style-type: none;
+        display: inline-block;
+        padding: 0;
+        margin: 15px 0 0 0;
+
+        font: 26px/1 $font_days;
+        color: $offblack-disabled;
+
+        li {
+            transition: all 1s ease;
+            padding-right: 13px;
+            display: block;
+            float: left;
+
+            &:last-child {
+                padding-right: 0px;
+            }
+
+            span {
+                transition: all 1s ease;
+                text-align: center;
+
+                display: table-cell;
+                vertical-align: bottom;
+                height: 33px;
+            }
+        }
+
+        .active {
+            font-size: 34px;
+            color: $offblack;
+        }
+    }
+}
+
+.center-text {
+    text-align: center;
+}
