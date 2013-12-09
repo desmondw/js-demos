@@ -1,6 +1,14 @@
 $(document).ready(function(){
-	var clockHalfWidth = parseInt($(".clock").css('width')) / 2;
-	var clockHalfHeight = parseInt($(".clock").css('height')) / 2;
-	$(".clock").css('margin-left', -clockHalfWidth + "px");
-	$(".clock").css('margin-top', -clockHalfHeight + "px");
+	var clockWidth = parseInt($(".clock").css('width'));
+	var clockHeight = parseInt($(".clock").css('height'));
+	$(".clock").css('left', "calc(50%-" + clockWidth/2 + "px)");
+	$(".clock").css('top', "calc(50%-" + clockHeight/2 + "px)");
+
+
+	//fade in clock
+	// $(".clock").css('margin-top', -=clockHeight/2 + "px") //set above
+	// $(".clock").animate({
+	// 	marginTop: +=clockHeight/2 + "px",
+	// 	opacity: 1,
+	// }, 1000);
 });

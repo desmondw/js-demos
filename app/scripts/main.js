@@ -28,10 +28,4 @@ function clockCtrl($scope, $timeout, $filter) {
 		$timeout(updateTime, 1000);
 	}
 	updateTime();
-
-	$scope.setDay = function(e) {
-		$(".active").removeClass('active');
-		$(e).addClass('active');
-		$(e).html('active');
-	}
 }
