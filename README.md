@@ -1,6 +1,7 @@
-Frontend Tech Demos
+Frontend Tech Demo
 ========
 
-Frontend tech demos built using AngularJS and Yeoman.
+Frontend tech demo built using AngularJS and Yeoman.
 
-Demo: http://desmondw.com/demo
+Post-Mortem: http://desmondw.com/portfolio/angular-clock/
+Demo: http://desmondw.com/demos/ng-clock/
